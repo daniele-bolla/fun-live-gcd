@@ -1,0 +1,9 @@
+node_modules
+package-lock.json
+*.log
+*.gz
+local.txt
+.nyc_output
+coverage
+.gcloudignore
+benchmarks/graphs

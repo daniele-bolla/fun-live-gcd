@@ -1,0 +1,17 @@
+{
+  "name": "func_live_gcd",
+  "version": "1.0.0",
+  "description": "Greater Common Divisor for fun.live",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+
+  },
+  "author": "daniele-bolla <bolladaniele@gmail.com> (https://daniele-bolla.github.io/)",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.4.0",
+    "express": "^4.19.2"
+  }
+}
