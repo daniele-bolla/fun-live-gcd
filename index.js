@@ -9,27 +9,31 @@ functions.http('helloGET', (req, res) => {
   res.send('Hello World!');
 });
 
-const docs = {
-  name: "gcd",
-  description: "Greater Common Divisor",
-  input: {
-    a: {
-      type: "number",
-      description: "First integer to compute gcd",
-      example: "78",
-    },
-    b: {
-      type: "number",
-      description: "Second integer to compute gcd",
-      example: "78",
-    },
+const docs ={
+  "name": "gcd",
+  "description": "Greater Common Divisor",
+  "input": {
+      "type": "object",
+      "properties":{
+        "a": {
+          "type": "number",
+          "description": "First integer to compute gcd",
+          "example": "78"
+        },
+        "b": {
+          "type": "number",
+          "description": "Second integer to compute gcd",
+          "example": "14"
+        }
+      },
+      "required": ["a", "b"]
   },
-  output: {
-    type: "number",
-    description: "Greater Common Divisor of the two integer given",
-    example: "2",
-  },
-};
+  "output": {
+    "type": "number",
+    "description": "Greater Common Divisor of the two integers given",
+    "example": 2
+  }
+}
 
 function rgcd(a, b) {
   if (b == 0) return a;
