@@ -1,32 +1,30 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
-const functions = require('@google-cloud/functions-framework');
+require('@google-cloud/functions-framework');
 
-// Register an HTTP function with the Functions Framework that will be executed
-// when you make an HTTP request to the deployed function's endpoint.
-functions.http('helloGET', (req, res) => {
-  res.send('Hello World!');
-});
-
-const docs ={
+const docs = {
   "name": "gcd",
   "description": "Greater Common Divisor",
   "input": {
-      "type": "object",
-      "properties":{
-        "a": {
-          "type": "number",
-          "description": "First integer to compute gcd",
-          "example": "78"
-        },
-        "b": {
-          "type": "number",
-          "description": "Second integer to compute gcd",
-          "example": "14"
-        }
+    "type": "object",
+    "description": "Input the two integers a , b",
+    "properties": {
+      "a": {
+        "type": "number",
+        "description": "First integer to compute gcd",
+        "example": 78
       },
-      "required": ["a", "b"]
+      "b": {
+        "type": "number",
+        "description": "Second integer to compute gcd",
+        "example": 14
+      }
+    },
+    "required": [
+      "a",
+      "b"
+    ]
   },
   "output": {
     "type": "number",
