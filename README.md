@@ -6,7 +6,6 @@
 npm install
 ```
 ###  Local
-If you have gcloud installed you can use 
 
 ```sh
  npx @google-cloud/functions-framework --target=gcd
@@ -20,5 +19,3 @@ This function is deployd on google cloud functions [https://europe-west2-funcliv
           a:78,
           b:14
       }```
-
-- List Users  GET `{baseURl}/api/users`  accessible only With Authentication
